@@ -15,15 +15,14 @@
 <h2 id="预览"><a href="#预览" class="headerlink" title="预览"></a>预览</h2><p align="center">
 <img src="../images/netease/netease_sr_10.png" width="32%"/>
 <img src="../images/netease/netease_sr_11.png" width="32%"/>
-<img src="../images/netease/netease_sr_12.png" width="32%"/>
 </p>
 
 <blockquote>
 <p>new add</p>
 </blockquote>
 <img src="../images/netease/netease_playlis_detail.png" width="32%"/>
-![playlist-detail](https://user-images.githubusercontent.com/8099426/124355399-7c399480-dc43-11eb-9085-629d78835e8f.gif)
 
+<p><img src="https://user-images.githubusercontent.com/8099426/124355399-7c399480-dc43-11eb-9085-629d78835e8f.gif" alt="playlist-detail"></p>
 <p>歌单这页实现功能有两个点分享</p>
 <h2 id="共享元素过渡动画"><a href="#共享元素过渡动画" class="headerlink" title="共享元素过渡动画"></a>共享元素过渡动画</h2><figure class="highlight kotlin"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">itemView.apply &#123;</span><br><span class="line">setOnClickListener &#123;</span><br><span class="line"></span><br><span class="line">  <span class="keyword">data</span>.resources?.let &#123;</span><br><span class="line">    <span class="keyword">val</span> intent = Intent(context, PlayListActivity::<span class="keyword">class</span>.java)</span><br><span class="line">    intent.putExtra(<span class="string">&quot;resourceId&quot;</span>, <span class="keyword">data</span>.resources[<span class="number">0</span>].resourceId)</span><br><span class="line">    intent.putExtra(<span class="string">&quot;alg&quot;</span>, <span class="keyword">data</span>.alg)</span><br><span class="line">    intent.putExtra(<span class="string">&quot;imageUrl&quot;</span>, <span class="keyword">data</span>.imageUrl())</span><br><span class="line">    <span class="keyword">val</span> options = ActivityOptions.makeSceneTransitionAnimation(</span><br><span class="line">      activity,</span><br><span class="line">      <span class="comment">// 创建多个共享元素</span></span><br><span class="line">      create(image, <span class="keyword">data</span>.resources[<span class="number">0</span>].resourceId))</span><br><span class="line"></span><br><span class="line">    ActivityCompat.startActivity(context, intent, options.toBundle())</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
