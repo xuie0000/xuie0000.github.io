@@ -1,0 +1,197 @@
+<!DOCTYPE html><html lang="zh-Hans"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"><meta name="description" content="Spring Boot之Spring-Data-JPA"><meta name="keywords" content="JPA"><meta name="author" content="二十I邊界"><meta name="copyright" content="二十I邊界"><title>Spring Boot之Spring-Data-JPA | 二十I邊界</title><link rel="shortcut icon" href="/my-favicon.ico"><link rel="stylesheet" href="/css/index.css?version=1.9.0"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome@latest/css/font-awesome.min.css?version=1.9.0"><meta name="format-detection" content="telephone=no"><meta http-equiv="x-dns-prefetch-control" content="on"><link rel="dns-prefetch" href="https://cdn.jsdelivr.net"><link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/gitalk/dist/gitalk.min.css"><script src="https://cdn.jsdelivr.net/npm/gitalk@latest/dist/gitalk.min.js"></script><script src="https://cdn.jsdelivr.net/npm/blueimp-md5@2.10.0/js/md5.min.js"></script><meta http-equiv="Cache-Control" content="no-transform"><meta http-equiv="Cache-Control" content="no-siteapp"><script>var GLOBAL_CONFIG = { 
+  root: '/',
+  algolia: undefined,
+  localSearch: {"path":"search.xml","languages":{"hits_empty":"找不到您查询的内容:${query}"}},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  hexoVersion: '5.4.2'
+} </script><meta name="generator" content="Hexo 5.4.2"><link rel="alternate" href="/atom.xml" title="二十I邊界" type="application/atom+xml">
+</head><body><canvas class="fireworks"></canvas><i class="fa fa-arrow-right" id="toggle-sidebar" aria-hidden="true"></i><div id="sidebar" data-display="false"><div class="toggle-sidebar-info text-center"><span data-toggle="切换文章详情">切换站点概览</span><hr></div><div class="sidebar-toc"><div class="sidebar-toc__title">目录</div><div class="sidebar-toc__progress"><span class="progress-notice">你已经读了</span><span class="progress-num">0</span><span class="progress-percentage">%</span><div class="sidebar-toc__progress-bar"></div></div><div class="sidebar-toc__content"><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%B7%BB%E5%8A%A0JPA%E5%BA%93%E5%8C%85"><span class="toc-number">1.</span> <span class="toc-text">添加JPA库包</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%B7%BB%E5%8A%A0JpaRepository%E5%85%B3%E8%81%94%E6%95%B0%E6%8D%AE%E5%BA%93%E5%BA%94%E7%94%A8"><span class="toc-number">2.</span> <span class="toc-text">添加JpaRepository关联数据库应用</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%B7%BB%E5%8A%A0%E6%95%B0%E6%8D%AE%E5%BA%93%E5%AF%B9%E8%B1%A1"><span class="toc-number">2.1.</span> <span class="toc-text">添加数据库对象</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%85%B3%E8%81%94Reposity"><span class="toc-number">2.2.</span> <span class="toc-text">关联Reposity</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%98%A0%E5%B0%84api%E6%8E%A5%E5%8F%A3"><span class="toc-number">2.3.</span> <span class="toc-text">映射api接口</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%94%AF%E6%8C%81%E5%85%B3%E9%94%AE%E5%AD%97%E6%A8%A1%E7%B3%8A%E5%8C%B9%E9%85%8D"><span class="toc-number">2.4.</span> <span class="toc-text">支持关键字模糊匹配</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%94%99%E8%AF%AForg-springframework-data-mapping-PropertyReferenceException-No-property-id-found-for-type-entity"><span class="toc-number">3.</span> <span class="toc-text">错误org.springframework.data.mapping.PropertyReferenceException: No property id found for type [entity]</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%8F%82%E8%80%83"><span class="toc-number">4.</span> <span class="toc-text">参考</span></a></li></ol></div></div><div class="author-info hide"><div class="author-info__avatar text-center"><img src="/img/avatar.png"></div><div class="author-info__name text-center">二十I邊界</div><div class="author-info__description text-center">Get busy living or get busy dying!</div><div class="follow-button"><a target="_blank" rel="noopener" href="https://github.com/xuie0000">Follow Me</a></div><hr><div class="author-info-articles"><a class="author-info-articles__archives article-meta" href="/archives"><span class="pull-left">文章</span><span class="pull-right">49</span></a><a class="author-info-articles__tags article-meta" href="/tags"><span class="pull-left">标签</span><span class="pull-right">66</span></a><a class="author-info-articles__categories article-meta" href="/categories"><span class="pull-left">分类</span><span class="pull-right">5</span></a></div><hr><div class="author-info-links"><div class="author-info-links__title text-center">Links</div><a class="author-info-links__name text-center" target="_blank" rel="noopener" href="http://androidweekly.net/">ANDROID WEEKLY</a><a class="author-info-links__name text-center" target="_blank" rel="noopener" href="https://toutiao.io/">开发者头条</a><a class="author-info-links__name text-center" target="_blank" rel="noopener" href="http://www.androidweekly.cn/">开发技术周报</a></div></div></div><div id="content-outer"><div id="top-container" style="background-image: url(https://github.com/xuie0000/xuie0000.github.io/assets/8099426/134083e7-4bd0-4f3a-94e0-b334ff94b09a)"><div id="page-header"><span class="pull-left"> <a id="site-name" href="/">二十I邊界</a></span><i class="fa fa-bars toggle-menu pull-right" aria-hidden="true"></i><span class="pull-right menus">   <a class="site-page" href="/">Home</a><a class="site-page" href="/archives">Archives</a><a class="site-page" href="/categories/Android">Android</a><a class="site-page" href="/categories/Spring-Boot">Spring</a><a class="site-page" href="/categories/随想">Other</a><a class="site-page" href="/tags">Tags</a></span><span class="pull-right"><a class="site-page social-icon search"><i class="fa fa-search"></i><span> 搜索</span></a></span></div><div id="post-info"><div id="post-title">Spring Boot之Spring-Data-JPA</div><div id="post-meta"><time class="post-meta__date"><i class="fa fa-calendar" aria-hidden="true"></i> 2019-11-20</time><span class="post-meta__separator">|</span><i class="fa fa-inbox post-meta__icon" aria-hidden="true"></i><a class="post-meta__categories" href="/categories/Spring-Boot/">Spring Boot</a></div></div></div><div class="layout" id="content-inner"><article id="post"><div class="article-container" id="post-content"><blockquote>
+<p>Spring Boot，记录一下库JPA，一上手的时候，看着spring的配置真也是头疼，各种数据库….之前我只了解Mysql或Oracle，结果你来这么多，不知道想干什么！</p>
+</blockquote>
+<p>JPA是一个ORM的映射框架，目的就是为了提高开发效率和提升性能体验</p>
+<span id="more"></span>
+
+<h2 id="添加JPA库包"><a href="#添加JPA库包" class="headerlink" title="添加JPA库包"></a>添加JPA库包</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">&lt;dependency&gt;</span><br><span class="line">    &lt;groupId&gt;org.springframework.boot&lt;/groupId&gt;</span><br><span class="line">    &lt;artifactId&gt;spring-boot-starter-data-jpa&lt;/artifactId&gt;</span><br><span class="line">&lt;/dependency&gt;</span><br><span class="line">&lt;dependency&gt;</span><br><span class="line">    &lt;groupId&gt;mysql&lt;/groupId&gt;</span><br><span class="line">    &lt;artifactId&gt;mysql-connector-java&lt;/artifactId&gt;</span><br><span class="line">    &lt;scope&gt;runtime&lt;/scope&gt;</span><br><span class="line">&lt;/dependency&gt;</span><br></pre></td></tr></table></figure>
+
+<p>在<code>application.yml</code>中可以添加执行sql语句显示</p>
+<figure class="highlight yml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">spring:</span></span><br><span class="line">  <span class="attr">datasource:</span></span><br><span class="line">    <span class="attr">username:</span> [<span class="string">username</span>]</span><br><span class="line">    <span class="attr">password:</span> [<span class="string">password</span>]</span><br><span class="line">    <span class="attr">url:</span> <span class="string">jdbc:mysql://localhost:3306/test?useUnicode=true&amp;characterEncoding=UTF-8&amp;serverTimezone=UTC</span></span><br><span class="line">    <span class="attr">driver-class-name:</span> <span class="string">com.mysql.cj.jdbc.Driver</span></span><br><span class="line">  <span class="attr">jpa:</span></span><br><span class="line">    <span class="attr">show-sql:</span> <span class="literal">true</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="添加JpaRepository关联数据库应用"><a href="#添加JpaRepository关联数据库应用" class="headerlink" title="添加JpaRepository关联数据库应用"></a>添加<code>JpaRepository</code>关联数据库应用</h2><h3 id="添加数据库对象"><a href="#添加数据库对象" class="headerlink" title="添加数据库对象"></a>添加数据库对象</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@Entity(name = &quot;test&quot;)</span></span><br><span class="line"><span class="meta">@Table(name = &quot;test&quot;)</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">TestModel</span> &#123;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">public</span> String user;</span><br><span class="line">    <span class="keyword">public</span> String title;</span><br><span class="line">    <span class="keyword">public</span> String image;</span><br><span class="line">    <span class="keyword">public</span> <span class="type">double</span> price;</span><br><span class="line">    <span class="keyword">public</span> String time;</span><br><span class="line">    <span class="keyword">public</span> String region;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Id</span></span><br><span class="line">    <span class="keyword">public</span> String id;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// **必须**填写空构造函数</span></span><br><span class="line">    publicTestModel () &#123;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="关联Reposity"><a href="#关联Reposity" class="headerlink" title="关联Reposity"></a>关联Reposity</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@Repository</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">interface</span> <span class="title class_">TestRepository</span> <span class="keyword">extends</span> <span class="title class_">JpaRepository</span>&lt;TestModel, String&gt; &#123;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Query(&quot;select t.user, t.title, t.image, t.price, t.time, t.region from test t&quot;)</span></span><br><span class="line">    Page&lt;TestModel&gt; <span class="title function_">findTestList</span><span class="params">(Pageable pageable)</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="映射api接口"><a href="#映射api接口" class="headerlink" title="映射api接口"></a>映射api接口</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@RestController</span></span><br><span class="line"><span class="meta">@RequestMapping(&quot;/test&quot;)</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title class_">TestController</span> &#123;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Resource</span></span><br><span class="line">    <span class="keyword">private</span> TestRepository repository;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@GetMapping(&quot;/list&quot;)</span></span><br><span class="line">    <span class="keyword">public</span> Page&lt;TestModel&gt; <span class="title function_">list</span><span class="params">(</span></span><br><span class="line"><span class="params">            <span class="meta">@RequestParam(value = &quot;page&quot;, defaultValue = &quot;0&quot;)</span> Integer page,</span></span><br><span class="line"><span class="params">            <span class="meta">@RequestParam(value = &quot;size&quot;, defaultValue = &quot;6&quot;)</span> Integer size</span></span><br><span class="line"><span class="params">    )</span> &#123;</span><br><span class="line">        <span class="type">Sort</span> <span class="variable">sort</span> <span class="operator">=</span> Sort.by(Sort.Direction.DESC, <span class="string">&quot;id&quot;</span>);</span><br><span class="line">        <span class="type">PageRequest</span> <span class="variable">pageable</span> <span class="operator">=</span> PageRequest.of(page, size, sort);</span><br><span class="line">        <span class="keyword">return</span> repository.findAll(pageable);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>添加完成后，就可以一键使用<code>Spring Boot JPA</code>套餐了，套餐丰富到你已经不用再写一条SQL语句了，如果实在要写，可以参考我上面写的<code>findTestList</code>示例（爬坑前方法！）</p>
+<p>套餐示例，可以直接看<code>JpaRepository</code>，<code>PagingAndSortingRepository</code>和<code>CrudRepository</code>。</p>
+<p><code>JpaRepository</code> extends <code>PagingAndSortingRepository</code> which in turn extends <code>CrudRepository</code>.</p>
+<p>Their main functions are:</p>
+<ul>
+<li><code>CrudRepository</code> mainly provides CRUD functions.</li>
+<li><code>PagingAndSortingRepository</code> provides methods to do pagination and sorting records.</li>
+<li><code>JpaRepository</code> provides some JPA-related methods such as flushing the persistence context and deleting records in a batch.</li>
+</ul>
+<p>Because of the inheritance mentioned above, <code>JpaRepository</code> will have all the functions of <code>CrudRepository</code> and <code>PagingAndSortingRepository</code>. So if you don’t need the repository to have the functions provided by <code>JpaRepository</code> and <code>PagingAndSortingRepository</code> , use <code>CrudRepository</code>.</p>
+<p>总结就是<code>JpaRepository</code>功能强大，你只需要它，你还可以试试<code>RxJava2CrudRepository</code>等异步<code>Repository</code></p>
+<h3 id="支持关键字模糊匹配"><a href="#支持关键字模糊匹配" class="headerlink" title="支持关键字模糊匹配"></a>支持关键字模糊匹配</h3><table>
+<thead>
+<tr>
+<th>Keyword</th>
+<th>Sample</th>
+<th>JPQL snippet</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>And</td>
+<td>findByLastnameAndFirstname</td>
+<td>… where x.lastname &#x3D; ?1 and x.firstname &#x3D; ?2</td>
+</tr>
+<tr>
+<td>Or</td>
+<td>findByLastnameOrFirstname</td>
+<td>… where x.lastname &#x3D; ?1 or x.firstname &#x3D; ?2</td>
+</tr>
+<tr>
+<td>Is, Equals</td>
+<td>findByFirstname,findByFirstnameIs,findByFirstnameEquals</td>
+<td>… where x.firstname &#x3D; ?1</td>
+</tr>
+<tr>
+<td>Between</td>
+<td>findByStartDateBetween</td>
+<td>… where x.startDate between ?1 and ?2</td>
+</tr>
+<tr>
+<td>LessThan</td>
+<td>findByAgeLessThan</td>
+<td>… where x.age &lt; ?1</td>
+</tr>
+<tr>
+<td>LessThanEqual</td>
+<td>findByAgeLessThanEqual</td>
+<td>… where x.age &lt;&#x3D; ?1</td>
+</tr>
+<tr>
+<td>GreaterThan</td>
+<td>findByAgeGreaterThan</td>
+<td>… where x.age &gt; ?1</td>
+</tr>
+<tr>
+<td>GreaterThanEqual</td>
+<td>findByAgeGreaterThanEqual</td>
+<td>… where x.age &gt;&#x3D; ?1</td>
+</tr>
+<tr>
+<td>After</td>
+<td>findByStartDateAfter</td>
+<td>… where x.startDate &gt; ?1</td>
+</tr>
+<tr>
+<td>Before</td>
+<td>findByStartDateBefore</td>
+<td>… where x.startDate &lt; ?1</td>
+</tr>
+<tr>
+<td>IsNull, Null</td>
+<td>findByAge(Is)Null</td>
+<td>… where x.age is null</td>
+</tr>
+<tr>
+<td>IsNotNull, NotNull</td>
+<td>findByAge(Is)NotNull</td>
+<td>… where x.age not null</td>
+</tr>
+<tr>
+<td>Like</td>
+<td>findByFirstnameLike</td>
+<td>… where x.firstname like ?1</td>
+</tr>
+<tr>
+<td>NotLike</td>
+<td>findByFirstnameNotLike</td>
+<td>… where x.firstname not like ?1</td>
+</tr>
+<tr>
+<td>StartingWith</td>
+<td>findByFirstnameStartingWith</td>
+<td>… where x.firstname like ?1 (parameter bound with appended %)</td>
+</tr>
+<tr>
+<td>EndingWith</td>
+<td>findByFirstnameEndingWith</td>
+<td>… where x.firstname like ?1 (parameter bound with prepended %)</td>
+</tr>
+<tr>
+<td>Containing</td>
+<td>findByFirstnameContaining</td>
+<td>… where x.firstname like ?1 (parameter bound wrapped in %)</td>
+</tr>
+<tr>
+<td>OrderBy</td>
+<td>findByAgeOrderByLastnameDesc</td>
+<td>… where x.age &#x3D; ?1 order by x.lastname desc</td>
+</tr>
+<tr>
+<td>Not</td>
+<td>findByLastnameNot</td>
+<td>… where x.lastname &lt;&gt; ?1</td>
+</tr>
+<tr>
+<td>In</td>
+<td>findByAgeIn(Collection<Age> ages)</td>
+<td>… where x.age in ?1</td>
+</tr>
+<tr>
+<td>NotIn</td>
+<td>findByAgeNotIn(Collection<Age> ages)</td>
+<td>… where x.age not in ?1</td>
+</tr>
+<tr>
+<td>True</td>
+<td>findByActiveTrue()</td>
+<td>… where x.active &#x3D; true</td>
+</tr>
+<tr>
+<td>False</td>
+<td>findByActiveFalse()</td>
+<td>… where x.active &#x3D; false</td>
+</tr>
+<tr>
+<td>IgnoreCase</td>
+<td>findByFirstnameIgnoreCase</td>
+<td>… where UPPER(x.firstame) &#x3D; UPPER(?1)</td>
+</tr>
+</tbody></table>
+<p>例如：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@Repository</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">interface</span> <span class="title class_">UserRepository</span> <span class="keyword">extends</span> <span class="title class_">CrudRepository</span>&lt;UserModel, Long&gt; &#123;</span><br><span class="line">    UserModel <span class="title function_">findByUser</span><span class="params">(String user)</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>其中<code>user</code>就是<code>UserModel</code>中的成员变量</p>
+<h2 id="错误org-springframework-data-mapping-PropertyReferenceException-No-property-id-found-for-type-entity"><a href="#错误org-springframework-data-mapping-PropertyReferenceException-No-property-id-found-for-type-entity" class="headerlink" title="错误org.springframework.data.mapping.PropertyReferenceException: No property id found for type [entity]"></a>错误<code>org.springframework.data.mapping.PropertyReferenceException: No property id found for type [entity]</code></h2><p>这里因为基类Model中没有<code>id</code>成员，不只是标记<code>@Id</code>，而是必须为<code>id</code>，如</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@Id</span></span><br><span class="line"><span class="keyword">public</span> String id;</span><br></pre></td></tr></table></figure>
+
+<p>Navicat修改表结构</p>
+<ol>
+<li>保存当前SQL数据：转存SQL文件-&gt;选择“结构和数据”</li>
+<li>修改表结构：右键-&gt;设计表，再修改所需要的表</li>
+<li>删除数据库，再重新导航SQL运行文件</li>
+</ol>
+<h2 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h2><p><a target="_blank" rel="noopener" href="https://stackoverflow.com/questions/14014086/what-is-difference-between-crudrepository-and-jparepository-interfaces-in-spring">https://stackoverflow.com/questions/14014086/what-is-difference-between-crudrepository-and-jparepository-interfaces-in-spring</a><br><a target="_blank" rel="noopener" href="https://docs.spring.io/spring-data/jpa/docs/2.2.1.RELEASE/reference/html/#reference">https://docs.spring.io/spring-data/jpa/docs/2.2.1.RELEASE/reference/html/#reference</a><br><a target="_blank" rel="noopener" href="https://spring.io/projects/spring-data-jpa#overview">https://spring.io/projects/spring-data-jpa#overview</a></p>
+</div></article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta">文章作者: </span><span class="post-copyright-info"><a href="mailto:undefined">二十I邊界</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta">文章链接: </span><span class="post-copyright-info"><a href="https://xuie0000.com/post/2019-11-20-2019/Spring-Boot之Spring-Data-JPA.html">https://xuie0000.com/post/2019-11-20-2019/Spring-Boot之Spring-Data-JPA.html</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta">版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a target="_blank" rel="noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来自 <a href="https://xuie0000.com">二十I邊界</a>！</span></div></div><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/JPA/">JPA</a></div><nav id="pagination"><div class="prev-post pull-left"><a href="/post/2019-11-21-2019/Spring-Boot%E4%B9%8BRedis.html"><i class="fa fa-chevron-left">  </i><span>Spring Boot之Redis</span></a></div><div class="next-post pull-right"><a href="/post/2019-11-13-2019/Hexo%E5%8D%9A%E5%AE%A2%E4%B8%BB%E9%A2%98%E5%88%87%E6%8D%A2%E4%B8%BAMelody.html"><span>Hexo博客主题切换为Melody</span><i class="fa fa-chevron-right"></i></a></div></nav><div id="gitalk-container"></div><script>var gitalk = new Gitalk({
+  clientID: '5f40ac3455a6602d7ceb',
+  clientSecret: 'a5e139552df2922935464b9962b851b3f8c90c1d',
+  repo: 'xuie0000.github.io',
+  owner: 'xuie0000',
+  admin: 'xuie0000',
+  id: md5(decodeURI(location.pathname)),
+  language: 'zh-CN'
+})
+gitalk.render('gitalk-container')</script></div></div><footer class="footer-bg" style="background-image: url(https://github.com/xuie0000/xuie0000.github.io/assets/8099426/134083e7-4bd0-4f3a-94e0-b334ff94b09a)"><div class="layout" id="footer"><div class="copyright">&copy;2021 - 2023 By 二十I邊界</div><div class="framework-info"><span>驱动 - </span><a target="_blank" rel="noopener" href="http://hexo.io"><span>Hexo</span></a><span class="footer-separator">|</span><span>主题 - </span><a target="_blank" rel="noopener" href="https://github.com/Molunerfinn/hexo-theme-melody"><span>Melody</span></a></div><div class="busuanzi"><script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script><span id="busuanzi_container_page_pv"><i class="fa fa-file"></i><span id="busuanzi_value_page_pv"></span><span></span></span></div></div></footer><i class="fa fa-arrow-up" id="go-up" aria-hidden="true"></i><script src="https://cdn.jsdelivr.net/npm/animejs@latest/anime.min.js"></script><script src="https://cdn.jsdelivr.net/npm/jquery@latest/dist/jquery.min.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/fancybox@latest/dist/jquery.fancybox.min.js"></script><script src="https://cdn.jsdelivr.net/npm/velocity-animate@latest/velocity.min.js"></script><script src="https://cdn.jsdelivr.net/npm/velocity-ui-pack@latest/velocity.ui.min.js"></script><script src="/js/utils.js?version=1.9.0"></script><script src="/js/fancybox.js?version=1.9.0"></script><script src="/js/sidebar.js?version=1.9.0"></script><script src="/js/copy.js?version=1.9.0"></script><script src="/js/fireworks.js?version=1.9.0"></script><script src="/js/transition.js?version=1.9.0"></script><script src="/js/scroll.js?version=1.9.0"></script><script src="/js/head.js?version=1.9.0"></script><script src="/js/search/local-search.js"></script><script>if(/Android|webOS|iPhone|iPod|iPad|BlackBerry/i.test(navigator.userAgent)) {
+  $('#nav').addClass('is-mobile')
+  $('footer').addClass('is-mobile')
+  $('#top-container').addClass('is-mobile')
+}</script><div class="search-dialog" id="local-search"><div class="search-dialog__title" id="local-search-title">本地搜索</div><div id="local-input-panel"><div id="local-search-input"><div class="local-search-box"><input class="local-search-box--input" placeholder="搜索文章"></div></div></div><hr><div id="local-search-results"><div id="local-hits"></div><div id="local-stats"><div class="local-search-stats__hr" id="hr"><span>由</span> <a target="_blank" rel="noopener" href="https://github.com/wzpan/hexo-generator-search" style="color:#49B1F5;">hexo-generator-search</a>
+ <span>提供支持</span></div></div></div><span class="search-close-button"><i class="fa fa-times"></i></span></div><div class="search-mask"></div></body></html>
