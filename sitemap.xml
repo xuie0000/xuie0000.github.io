@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>https://xuie0000.com/post/2025-08-26-compose-material-you-part3.html</loc>
+    <loc>https://xuie0000.com/post/2024-01-13-compose-material-you-part2.html</loc>
     
     <lastmod>2025-08-27</lastmod>
     
@@ -11,9 +11,9 @@
   </url>
   
   <url>
-    <loc>https://xuie0000.com/post/2024-01-13-compose-material-you-part2.html</loc>
+    <loc>https://xuie0000.com/post/2025-08-26-compose-material-you-part3.html</loc>
     
-    <lastmod>2024-01-24</lastmod>
+    <lastmod>2025-08-27</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -110,7 +110,7 @@
   </url>
   
   <url>
-    <loc>https://xuie0000.com/post/2022-12-28-one-app-design.html</loc>
+    <loc>https://xuie0000.com/post/2021-05-31-netease-app-design.html</loc>
     
     <lastmod>2023-12-30</lastmod>
     
@@ -119,7 +119,7 @@
   </url>
   
   <url>
-    <loc>https://xuie0000.com/post/2021-05-31-netease-app-design.html</loc>
+    <loc>https://xuie0000.com/post/2022-12-28-one-app-design.html</loc>
     
     <lastmod>2023-12-30</lastmod>
     
@@ -182,7 +182,7 @@
   </url>
   
   <url>
-    <loc>https://xuie0000.com/post/2021-06-02-netease-05-search.html</loc>
+    <loc>https://xuie0000.com/post/2021-06-02-netease-04-drawer-layout.html</loc>
     
     <lastmod>2023-12-30</lastmod>
     
@@ -191,7 +191,7 @@
   </url>
   
   <url>
-    <loc>https://xuie0000.com/post/2021-06-02-netease-04-drawer-layout.html</loc>
+    <loc>https://xuie0000.com/post/2021-06-02-netease-05-search.html</loc>
     
     <lastmod>2023-12-30</lastmod>
     
@@ -245,7 +245,7 @@
   </url>
   
   <url>
-    <loc>https://xuie0000.com/post/2018-04-07-2019/%E5%BC%BA%E8%BD%AC%E5%B7%A5%E7%A8%8B%E4%B8%BAKotlin%EF%BC%8C%E4%B8%94%E7%94%A8RxJava2%E6%97%B6%E9%81%87%E5%88%B0%E7%9A%84%E9%97%AE%E9%A2%98.html</loc>
+    <loc>https://xuie0000.com/post/2016-01-02-2019/%E5%9B%BE%E7%89%87%E5%8A%A0%E8%BD%BD%E6%A1%86%E6%9E%B6%E5%A4%A7%E5%90%88%E9%9B%86.html</loc>
     
     <lastmod>2023-12-30</lastmod>
     
@@ -254,7 +254,7 @@
   </url>
   
   <url>
-    <loc>https://xuie0000.com/post/2016-01-02-2019/%E5%9B%BE%E7%89%87%E5%8A%A0%E8%BD%BD%E6%A1%86%E6%9E%B6%E5%A4%A7%E5%90%88%E9%9B%86.html</loc>
+    <loc>https://xuie0000.com/post/2018-04-07-2019/%E5%BC%BA%E8%BD%AC%E5%B7%A5%E7%A8%8B%E4%B8%BAKotlin%EF%BC%8C%E4%B8%94%E7%94%A8RxJava2%E6%97%B6%E9%81%87%E5%88%B0%E7%9A%84%E9%97%AE%E9%A2%98.html</loc>
     
     <lastmod>2023-12-30</lastmod>
     
@@ -308,25 +308,16 @@
   </url>
   
   <url>
-    <loc>https://xuie0000.com/post/2016-04-09-2019/android-studio%E4%BD%BF%E7%94%A8JDK8.html</loc>
-    
-    <lastmod>2023-12-30</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://xuie0000.com/post/2015-11-01-2019/ubuntu-15-04-%E7%BC%96%E8%AF%91Android-VLC.html</loc>
-    
-    <lastmod>2023-12-30</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>https://xuie0000.com/post/2017-01-16-2019/gradle-3-3-all-zip%E6%97%A0%E6%B3%95%E6%9B%B4%E6%96%B0.html</loc>
+    
+    <lastmod>2023-12-30</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://xuie0000.com/post/2016-04-09-2019/android-studio%E4%BD%BF%E7%94%A8JDK8.html</loc>
     
     <lastmod>2023-12-30</lastmod>
     
@@ -345,6 +336,15 @@
   
   <url>
     <loc>https://xuie0000.com/post/2015-10-31-2019/ubuntu%E5%BD%95%E5%88%B6GIF%E5%8A%A8%E7%94%BB.html</loc>
+    
+    <lastmod>2023-12-30</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://xuie0000.com/post/2015-11-01-2019/ubuntu-15-04-%E7%BC%96%E8%AF%91Android-VLC.html</loc>
     
     <lastmod>2023-12-30</lastmod>
     
@@ -407,7 +407,7 @@
   </url>
   
   <url>
-    <loc>https://xuie0000.com/post/2017-07-25-2019/Dynamic%20Web%20Module%203.1%20requires%20Java%201.7%20or%20newer.html</loc>
+    <loc>https://xuie0000.com/post/2015-12-27-2019/Gradle%E6%89%93%E5%8C%85%E7%AD%BE%E5%90%8D%E6%B7%B7%E6%B7%86.html</loc>
     
     <lastmod>2023-12-30</lastmod>
     
@@ -416,7 +416,7 @@
   </url>
   
   <url>
-    <loc>https://xuie0000.com/post/2015-12-27-2019/Gradle%E6%89%93%E5%8C%85%E7%AD%BE%E5%90%8D%E6%B7%B7%E6%B7%86.html</loc>
+    <loc>https://xuie0000.com/post/2017-07-25-2019/Dynamic%20Web%20Module%203.1%20requires%20Java%201.7%20or%20newer.html</loc>
     
     <lastmod>2023-12-30</lastmod>
     
@@ -461,7 +461,7 @@
   </url>
   
   <url>
-    <loc>https://xuie0000.com/post/2016-10-24-2019/Android-Audio%E7%B3%BB%E7%BB%9F%E5%88%86%E6%9E%90%E6%80%BB%E7%BB%93.html</loc>
+    <loc>https://xuie0000.com/post/2016-01-06-2019/AS%E8%BF%90%E7%94%A8NDK%E7%BC%96%E8%AF%91%E5%8F%8A%E8%B0%83%E7%94%A8.html</loc>
     
     <lastmod>2023-12-30</lastmod>
     
@@ -470,7 +470,7 @@
   </url>
   
   <url>
-    <loc>https://xuie0000.com/post/2016-01-06-2019/AS%E8%BF%90%E7%94%A8NDK%E7%BC%96%E8%AF%91%E5%8F%8A%E8%B0%83%E7%94%A8.html</loc>
+    <loc>https://xuie0000.com/post/2016-10-24-2019/Android-Audio%E7%B3%BB%E7%BB%9F%E5%88%86%E6%9E%90%E6%80%BB%E7%BB%93.html</loc>
     
     <lastmod>2023-12-30</lastmod>
     
@@ -486,6 +486,34 @@
     <priority>1.0</priority>
   </url>
 
+  
+  <url>
+    <loc>https://xuie0000.com/tags/Compose/</loc>
+    <lastmod>2025-08-27</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://xuie0000.com/tags/Material-You/</loc>
+    <lastmod>2025-08-27</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://xuie0000.com/tags/WanAndroid/</loc>
+    <lastmod>2025-08-27</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://xuie0000.com/tags/Multiplatform/</loc>
+    <lastmod>2025-08-27</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
   
   <url>
     <loc>https://xuie0000.com/tags/%E4%BA%91%E9%9F%B3%E4%B9%90/</loc>
@@ -509,7 +537,14 @@
   </url>
   
   <url>
-    <loc>https://xuie0000.com/tags/Compose/</loc>
+    <loc>https://xuie0000.com/tags/NDK/</loc>
+    <lastmod>2025-08-27</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://xuie0000.com/tags/android-studio/</loc>
     <lastmod>2025-08-27</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -531,20 +566,6 @@
   
   <url>
     <loc>https://xuie0000.com/tags/Audio/</loc>
-    <lastmod>2025-08-27</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://xuie0000.com/tags/NDK/</loc>
-    <lastmod>2025-08-27</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://xuie0000.com/tags/android-studio/</loc>
     <lastmod>2025-08-27</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -586,7 +607,28 @@
   </url>
   
   <url>
-    <loc>https://xuie0000.com/tags/J2EE/</loc>
+    <loc>https://xuie0000.com/tags/Hexo/</loc>
+    <lastmod>2025-08-27</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://xuie0000.com/tags/Hexo-Theme/</loc>
+    <lastmod>2025-08-27</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://xuie0000.com/tags/Melody/</loc>
+    <lastmod>2025-08-27</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://xuie0000.com/tags/Kotlin/</loc>
     <lastmod>2025-08-27</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -621,28 +663,7 @@
   </url>
   
   <url>
-    <loc>https://xuie0000.com/tags/Hexo/</loc>
-    <lastmod>2025-08-27</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://xuie0000.com/tags/Hexo-Theme/</loc>
-    <lastmod>2025-08-27</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://xuie0000.com/tags/Melody/</loc>
-    <lastmod>2025-08-27</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://xuie0000.com/tags/Kotlin/</loc>
+    <loc>https://xuie0000.com/tags/J2EE/</loc>
     <lastmod>2025-08-27</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -691,13 +712,6 @@
   </url>
   
   <url>
-    <loc>https://xuie0000.com/tags/JPA/</loc>
-    <lastmod>2025-08-27</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
     <loc>https://xuie0000.com/tags/Redis/</loc>
     <lastmod>2025-08-27</lastmod>
     <changefreq>weekly</changefreq>
@@ -706,6 +720,13 @@
   
   <url>
     <loc>https://xuie0000.com/tags/Cached/</loc>
+    <lastmod>2025-08-27</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://xuie0000.com/tags/JPA/</loc>
     <lastmod>2025-08-27</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -740,41 +761,6 @@
   </url>
   
   <url>
-    <loc>https://xuie0000.com/tags/Android%EF%BC%8C-Android-Studio-Tools/</loc>
-    <lastmod>2025-08-27</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://xuie0000.com/tags/JDK8/</loc>
-    <lastmod>2025-08-27</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://xuie0000.com/tags/VLC/</loc>
-    <lastmod>2025-08-27</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://xuie0000.com/tags/MediaPlayer/</loc>
-    <lastmod>2025-08-27</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://xuie0000.com/tags/%E6%92%AD%E6%94%BE%E5%99%A8/</loc>
-    <lastmod>2025-08-27</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
     <loc>https://xuie0000.com/tags/Android-Studio/</loc>
     <lastmod>2025-08-27</lastmod>
     <changefreq>weekly</changefreq>
@@ -783,6 +769,20 @@
   
   <url>
     <loc>https://xuie0000.com/tags/Gradle%E6%9B%B4%E6%96%B0/</loc>
+    <lastmod>2025-08-27</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://xuie0000.com/tags/Android%EF%BC%8C-Android-Studio-Tools/</loc>
+    <lastmod>2025-08-27</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://xuie0000.com/tags/JDK8/</loc>
     <lastmod>2025-08-27</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -811,6 +811,27 @@
   
   <url>
     <loc>https://xuie0000.com/tags/ScreenRecord/</loc>
+    <lastmod>2025-08-27</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://xuie0000.com/tags/VLC/</loc>
+    <lastmod>2025-08-27</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://xuie0000.com/tags/MediaPlayer/</loc>
+    <lastmod>2025-08-27</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>https://xuie0000.com/tags/%E6%92%AD%E6%94%BE%E5%99%A8/</loc>
     <lastmod>2025-08-27</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -852,14 +873,14 @@
   </url>
   
   <url>
-    <loc>https://xuie0000.com/tags/RxJava2/</loc>
+    <loc>https://xuie0000.com/tags/%E5%9B%BE%E7%89%87%E5%8A%A0%E8%BD%BD%E6%A1%86%E6%9E%B6/</loc>
     <lastmod>2025-08-27</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://xuie0000.com/tags/%E5%9B%BE%E7%89%87%E5%8A%A0%E8%BD%BD%E6%A1%86%E6%9E%B6/</loc>
+    <loc>https://xuie0000.com/tags/RxJava2/</loc>
     <lastmod>2025-08-27</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -930,27 +951,6 @@
   
   <url>
     <loc>https://xuie0000.com/tags/Eclipse/</loc>
-    <lastmod>2025-08-27</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://xuie0000.com/tags/Material-You/</loc>
-    <lastmod>2025-08-27</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://xuie0000.com/tags/WanAndroid/</loc>
-    <lastmod>2025-08-27</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>https://xuie0000.com/tags/Multiplatform/</loc>
     <lastmod>2025-08-27</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
